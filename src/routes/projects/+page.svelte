@@ -1,186 +1,155 @@
 <script lang="ts">
-	import * as Card from '$lib/components/ui/card';
-	import { Button } from '$lib/components/ui/button';
-	import { Badge } from '$lib/components/ui/badge';
-	import { Building2, Shield, Cloud, Users } from 'lucide-svelte';
+	import { ArrowUpRight } from 'lucide-svelte';
 
 	const projects = [
 		{
 			title: 'Federal Agency IT Modernization',
 			client: 'U.S. Federal Agency',
 			category: 'Cloud Migration',
-			icon: Cloud,
 			description:
-				'Led a comprehensive IT modernization initiative to migrate legacy systems to a secure cloud infrastructure, improving operational efficiency and reducing maintenance costs.',
-			outcomes: [
-				'Migrated 50+ applications to cloud infrastructure',
-				'Achieved FedRAMP compliance',
-				'Reduced infrastructure costs by 35%',
-				'Improved system availability to 99.9%'
-			],
-			tags: ['Cloud Services', 'Security', 'Project Management']
+				'Led a comprehensive IT modernization initiative to migrate legacy systems to secure cloud infrastructure.',
+			image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80',
+			results: ['50+ applications migrated', 'FedRAMP compliance achieved', '35% cost reduction']
 		},
 		{
 			title: 'Cybersecurity Assessment Program',
-			client: 'Department of Defense Contractor',
-			category: 'Security Analysis',
-			icon: Shield,
+			client: 'Defense Contractor',
+			category: 'Security',
 			description:
-				'Conducted comprehensive security assessments and vulnerability testing across enterprise systems, implementing remediation strategies to strengthen security posture.',
-			outcomes: [
-				'Identified and remediated 200+ vulnerabilities',
-				'Developed security policies and procedures',
-				'Achieved CMMC Level 2 certification readiness',
-				'Implemented continuous monitoring solutions'
-			],
-			tags: ['Security Analysis', 'Compliance', 'Consulting']
+				'Conducted comprehensive security assessments and vulnerability testing across enterprise systems.',
+			image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80',
+			results: ['200+ vulnerabilities identified', 'CMMC Level 2 readiness', 'Continuous monitoring']
 		},
 		{
 			title: 'Custom Case Management System',
-			client: 'State Government Agency',
-			category: 'Custom Development',
-			icon: Building2,
+			client: 'State Government',
+			category: 'Development',
 			description:
-				'Designed and developed a custom case management application to streamline workflows, improve data accuracy, and enhance reporting capabilities for agency personnel.',
-			outcomes: [
-				'Reduced case processing time by 40%',
-				'Integrated with 5 existing agency systems',
-				'Trained 150+ users on new platform',
-				'Delivered on-time and under budget'
-			],
-			tags: ['Custom Development', 'Project Management', 'Training']
+				'Designed and developed a custom case management application to streamline agency workflows.',
+			image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+			results: ['40% faster processing', '5 system integrations', '150+ users trained']
 		},
 		{
-			title: 'Enterprise Resource Planning Implementation',
-			client: 'Government Services Contractor',
-			category: 'IT Consulting',
-			icon: Users,
+			title: 'Enterprise Resource Planning',
+			client: 'Government Contractor',
+			category: 'Consulting',
 			description:
-				'Provided strategic consulting and project management for enterprise-wide ERP implementation, ensuring alignment with business objectives and minimal operational disruption.',
-			outcomes: [
-				'Successfully deployed ERP across 12 locations',
-				'Managed change management for 500+ users',
-				'Established governance framework',
-				'Improved financial reporting accuracy by 60%'
-			],
-			tags: ['Consulting', 'Project Management', 'Training']
+				'Provided strategic consulting and project management for enterprise-wide ERP implementation.',
+			image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80',
+			results: ['12 locations deployed', '500+ users managed', '60% reporting improvement']
 		}
+	];
+
+	const stats = [
+		{ value: '50+', label: 'Projects Delivered' },
+		{ value: '15+', label: 'Years Experience' },
+		{ value: '99%', label: 'Client Satisfaction' },
+		{ value: '24/7', label: 'Support Available' }
 	];
 </script>
 
 <svelte:head>
-	<title>Past Projects - Mint Digital</title>
+	<title>Our Work - Mint Digital</title>
 	<meta
 		name="description"
-		content="Explore Mint Digital's portfolio of successful IT projects including cloud migrations, security assessments, custom development, and strategic consulting."
+		content="Explore Mint Digital's portfolio of successful IT projects including cloud migrations, security assessments, and custom development."
 	/>
 </svelte:head>
 
-<!-- Page Header -->
-<section class="bg-gradient-to-br from-primary/5 via-white to-accent/30 py-16 lg:py-20">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Hero Section -->
+<section class="py-20 lg:py-32">
+	<div class="max-w-7xl mx-auto px-6 lg:px-8">
 		<div class="max-w-3xl">
-			<h1 class="text-4xl lg:text-5xl font-bold text-foreground mb-6">Past Projects</h1>
-			<p class="text-lg text-muted-foreground leading-relaxed">
+			<p class="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+				Our Work
+			</p>
+			<h1 class="heading-display text-5xl lg:text-6xl xl:text-7xl leading-[0.9] mb-6">
+				Featured Projects
+			</h1>
+			<p class="text-lg lg:text-xl text-muted-foreground leading-relaxed">
 				We have a proven track record of delivering successful technology solutions for government
-				agencies and enterprises. Here are some examples of our work.
+				agencies and enterprises. Here's some of our recent work.
 			</p>
 		</div>
 	</div>
 </section>
 
 <!-- Projects Grid -->
-<section class="py-16 lg:py-20">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="pb-20 lg:pb-32">
+	<div class="max-w-7xl mx-auto px-6 lg:px-8">
 		<div class="grid md:grid-cols-2 gap-8">
 			{#each projects as project}
-				<Card.Root class="border-2 hover:border-primary/30 transition-colors">
-					<Card.Header>
-						<div class="flex items-start justify-between gap-4">
-							<div
-								class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary shrink-0"
+				<div class="group">
+					<div class="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6">
+						<img
+							src={project.image}
+							alt={project.title}
+							class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+						/>
+						<div
+							class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0"
+						></div>
+						<div class="absolute bottom-6 left-6 right-6">
+							<span
+								class="inline-block bg-white/90 text-foreground text-xs font-medium px-3 py-1 rounded-full mb-3"
 							>
-								<project.icon class="w-6 h-6" />
-							</div>
-							<Badge variant="secondary">{project.category}</Badge>
+								{project.category}
+							</span>
+							<h2 class="text-white text-2xl font-semibold">{project.title}</h2>
 						</div>
-						<Card.Title class="text-xl mt-4">{project.title}</Card.Title>
-						<p class="text-sm text-muted-foreground">{project.client}</p>
-					</Card.Header>
-					<Card.Content>
-						<p class="text-muted-foreground mb-6">{project.description}</p>
-						<div class="space-y-4">
-							<h4 class="font-semibold text-sm text-foreground">Key Outcomes</h4>
-							<ul class="space-y-2">
-								{#each project.outcomes as outcome}
-									<li class="text-sm text-muted-foreground flex items-start gap-2">
-										<span class="text-primary mt-1.5">•</span>
-										{outcome}
-									</li>
-								{/each}
-							</ul>
+						<div
+							class="absolute top-4 right-4 w-12 h-12 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+						>
+							<ArrowUpRight class="w-5 h-5" />
 						</div>
-						<div class="flex flex-wrap gap-2 mt-6">
-							{#each project.tags as tag}
-								<Badge variant="outline" class="text-xs">{tag}</Badge>
-							{/each}
-						</div>
-					</Card.Content>
-				</Card.Root>
+					</div>
+					<p class="text-sm text-muted-foreground mb-2">{project.client}</p>
+					<p class="text-muted-foreground leading-relaxed mb-4">{project.description}</p>
+					<div class="flex flex-wrap gap-2">
+						{#each project.results as result}
+							<span class="text-xs bg-muted px-3 py-1.5 rounded-full">{result}</span>
+						{/each}
+					</div>
+				</div>
 			{/each}
 		</div>
 	</div>
 </section>
 
-<!-- Capabilities Section -->
-<section class="py-16 lg:py-20 bg-muted/50">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="text-center mb-12">
-			<h2 class="text-3xl font-bold text-foreground mb-4">Our Capabilities</h2>
-			<p class="text-muted-foreground max-w-2xl mx-auto">
-				Our consultants have hands-on experience across industries and are committed to applying the
-				latest best practices and technologies to solve real business challenges.
+<!-- Stats Section -->
+<section class="py-20 lg:py-32 bg-muted">
+	<div class="max-w-7xl mx-auto px-6 lg:px-8">
+		<div class="text-center mb-16">
+			<p class="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+				By The Numbers
 			</p>
+			<h2 class="heading-display text-4xl lg:text-5xl">Our Track Record</h2>
 		</div>
-		<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-			<Card.Root class="text-center">
-				<Card.Content class="pt-6">
-					<div class="text-4xl font-bold text-primary mb-2">50+</div>
-					<p class="text-muted-foreground text-sm">Projects Delivered</p>
-				</Card.Content>
-			</Card.Root>
-			<Card.Root class="text-center">
-				<Card.Content class="pt-6">
-					<div class="text-4xl font-bold text-primary mb-2">15+</div>
-					<p class="text-muted-foreground text-sm">Years Experience</p>
-				</Card.Content>
-			</Card.Root>
-			<Card.Root class="text-center">
-				<Card.Content class="pt-6">
-					<div class="text-4xl font-bold text-primary mb-2">99%</div>
-					<p class="text-muted-foreground text-sm">Client Satisfaction</p>
-				</Card.Content>
-			</Card.Root>
-			<Card.Root class="text-center">
-				<Card.Content class="pt-6">
-					<div class="text-4xl font-bold text-primary mb-2">24/7</div>
-					<p class="text-muted-foreground text-sm">Support Available</p>
-				</Card.Content>
-			</Card.Root>
+		<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+			{#each stats as stat}
+				<div class="text-center">
+					<div class="text-5xl lg:text-6xl font-bold mb-2">{stat.value}</div>
+					<p class="text-muted-foreground">{stat.label}</p>
+				</div>
+			{/each}
 		</div>
 	</div>
 </section>
 
 <!-- CTA Section -->
-<section class="py-16 lg:py-20 bg-primary text-white">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-		<h2 class="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
-		<p class="text-primary-foreground/90 max-w-2xl mx-auto mb-8">
+<section class="py-20 lg:py-32">
+	<div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+		<h2 class="heading-display text-4xl lg:text-5xl mb-6">Ready to Start Your Project?</h2>
+		<p class="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
 			Let's discuss how we can help you achieve your technology goals. Our team is ready to partner
 			with you on your next initiative.
 		</p>
-		<Button href="/contact" variant="secondary" size="lg" class="font-semibold">
-			Contact Our Team
-		</Button>
+		<a
+			href="/contact"
+			class="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-base font-medium hover:bg-primary/90 transition-colors"
+		>
+			Start a Conversation
+			<ArrowUpRight class="w-5 h-5" />
+		</a>
 	</div>
 </section>

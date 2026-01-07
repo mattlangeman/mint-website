@@ -1,35 +1,35 @@
 @import 'tailwindcss';
 
 @theme {
-	--font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-		'Segoe UI Symbol', 'Noto Color Emoji';
-	--font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-		'Courier New', monospace;
+	--font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+	--font-body: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+	--font-display: 'Anton', ui-sans-serif, system-ui, sans-serif;
 
 	--radius-sm: 0.25rem;
-	--radius-md: 0.375rem;
-	--radius-lg: 0.5rem;
-	--radius-xl: 0.75rem;
+	--radius-md: 0.5rem;
+	--radius-lg: 1rem;
+	--radius-xl: 1.5rem;
+	--radius-full: 9999px;
 
 	--color-background: hsl(0 0% 100%);
-	--color-foreground: hsl(222.2 84% 4.9%);
+	--color-foreground: hsl(0 0% 8%);
 	--color-card: hsl(0 0% 100%);
-	--color-card-foreground: hsl(222.2 84% 4.9%);
+	--color-card-foreground: hsl(0 0% 8%);
 	--color-popover: hsl(0 0% 100%);
-	--color-popover-foreground: hsl(222.2 84% 4.9%);
-	--color-primary: hsl(158 64% 32%);
+	--color-popover-foreground: hsl(0 0% 8%);
+	--color-primary: hsl(0 0% 8%);
 	--color-primary-foreground: hsl(0 0% 100%);
-	--color-secondary: hsl(210 40% 96.1%);
-	--color-secondary-foreground: hsl(222.2 47.4% 11.2%);
-	--color-muted: hsl(210 40% 96.1%);
-	--color-muted-foreground: hsl(215.4 16.3% 46.9%);
-	--color-accent: hsl(158 64% 92%);
-	--color-accent-foreground: hsl(158 64% 22%);
-	--color-destructive: hsl(0 84.2% 60.2%);
-	--color-destructive-foreground: hsl(210 40% 98%);
-	--color-border: hsl(214.3 31.8% 91.4%);
-	--color-input: hsl(214.3 31.8% 91.4%);
-	--color-ring: hsl(158 64% 32%);
+	--color-secondary: hsl(0 0% 96%);
+	--color-secondary-foreground: hsl(0 0% 8%);
+	--color-muted: hsl(0 0% 96%);
+	--color-muted-foreground: hsl(0 0% 45%);
+	--color-accent: hsl(0 0% 96%);
+	--color-accent-foreground: hsl(0 0% 8%);
+	--color-destructive: hsl(0 84% 60%);
+	--color-destructive-foreground: hsl(0 0% 100%);
+	--color-border: hsl(0 0% 90%);
+	--color-input: hsl(0 0% 90%);
+	--color-ring: hsl(0 0% 8%);
 }
 
 @layer base {
@@ -37,6 +37,24 @@
 		@apply border-border;
 	}
 	body {
-		@apply bg-background text-foreground font-sans antialiased;
+		@apply bg-background text-foreground antialiased;
+		font-family: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
 	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+		@apply font-semibold;
+	}
+}
+
+/* Display heading style - for big hero text */
+.heading-display {
+	font-family: 'Anton', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	font-weight: 400;
 }

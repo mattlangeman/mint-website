@@ -1,54 +1,51 @@
 <script lang="ts">
-	import * as Card from '$lib/components/ui/card';
-	import { Button } from '$lib/components/ui/button';
-	import { Separator } from '$lib/components/ui/separator';
-	import { Target, Eye, Heart, Linkedin, Mail } from 'lucide-svelte';
+	import { ArrowUpRight, ArrowRight } from 'lucide-svelte';
 
 	const teamMembers = [
 		{
-			name: 'Zachary Mitchell',
-			title: 'Founder & Principal Consultant',
-			bio: 'With over 15 years of experience in IT consulting and project management, Zach leads our team in delivering innovative solutions for government and enterprise clients.',
+			name: 'Zach Giesky',
+			title: 'Founder & CEO',
+			bio: 'With over 15 years in IT consulting, Zach leads our team in delivering innovative solutions for government and enterprise clients.',
 			image: '/images/team/zach.jpg'
 		},
 		{
-			name: 'Sarah Chen',
-			title: 'Director of Security Services',
-			bio: 'Sarah brings extensive experience in cybersecurity analysis and compliance, helping clients navigate complex security requirements and protect their digital assets.',
+			name: 'Matt Langeman',
+			title: 'CTO',
+			bio: 'Matt brings over 15 years of experience building custom web applications and dashboards. He leads our technical direction and ensures we deliver solutions that truly meet client needs.',
+			image: '/images/team/matt.jpg'
+		},
+		{
+			name: 'Trevor Olexy',
+			title: 'CDO',
+			bio: 'Trevor combines deep expertise in data engineering and GIS with years of experience turning complex datasets into actionable insights. He leads our data strategy initiatives.',
 			image: null
 		},
 		{
-			name: 'Michael Torres',
-			title: 'Lead Software Architect',
-			bio: 'Michael specializes in designing scalable, secure applications and leads our custom development initiatives with a focus on modern technologies and best practices.',
-			image: null
-		},
-		{
-			name: 'Emily Rodriguez',
-			title: 'Senior Project Manager',
-			bio: 'Emily ensures successful project delivery through expert planning, stakeholder management, and her deep understanding of Agile and traditional methodologies.',
+			name: 'Chris Gillespie',
+			title: 'COO',
+			bio: 'Chris brings 15 years of experience in climate and energy policy, helping government and organizations navigate infrastructure resilience and sustainability challenges.',
 			image: null
 		}
 	];
 
 	const values = [
 		{
-			icon: Target,
+			number: '01',
 			title: 'Mission-Focused',
 			description:
 				'We understand the critical nature of government and enterprise IT. Every solution we deliver is designed with your mission in mind.'
 		},
 		{
-			icon: Eye,
+			number: '02',
 			title: 'Transparency',
 			description:
-				'We believe in open communication and honest assessments. You will always know where your project stands and what to expect.'
+				'We believe in open communication and honest assessments. You will always know where your project stands.'
 		},
 		{
-			icon: Heart,
+			number: '03',
 			title: 'Partnership',
 			description:
-				'We are not just vendors—we are partners invested in your success. Your challenges become our challenges to solve.'
+				"We're not just vendors—we're partners invested in your success. Your challenges become our challenges to solve."
 		}
 	];
 </script>
@@ -57,106 +54,121 @@
 	<title>About Us - Mint Digital</title>
 	<meta
 		name="description"
-		content="Learn about Mint Digital, a boutique consulting agency specializing in IT consulting, cloud services, cybersecurity analysis, and custom development."
+		content="Learn about Mint Digital, a boutique consulting agency specializing in IT consulting, cloud services, cybersecurity, and custom development."
 	/>
 </svelte:head>
 
-<!-- Page Header -->
-<section class="bg-gradient-to-br from-primary/5 via-white to-accent/30 py-16 lg:py-20">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="max-w-3xl">
-			<h1 class="text-4xl lg:text-5xl font-bold text-foreground mb-6">About Mint Digital</h1>
-			<p class="text-lg text-muted-foreground leading-relaxed">
-				We are a boutique consulting agency specializing in IT consulting, cloud services,
-				cybersecurity analysis, project management, and custom web development. Our team brings deep
-				technical expertise and a strategic approach to help organizations leverage technology
-				effectively and securely.
-			</p>
-		</div>
-	</div>
-</section>
-
-<!-- Our Story -->
-<section class="py-16 lg:py-20">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="grid lg:grid-cols-2 gap-12 items-center">
+<!-- Hero Section -->
+<section class="py-20 lg:py-32">
+	<div class="max-w-7xl mx-auto px-6 lg:px-8">
+		<div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
 			<div>
-				<h2 class="text-3xl font-bold text-foreground mb-6">Our Approach</h2>
-				<div class="space-y-4 text-muted-foreground leading-relaxed">
-					<p>
-						We partner with clients to deliver tailored solutions that align with their goals,
-						whether that means optimizing IT infrastructure, securing digital assets, managing
-						complex projects, or building specialized web applications.
-					</p>
-					<p>
-						Our consultants have hands-on experience across industries and are committed to applying
-						the latest best practices and technologies to solve real business challenges.
-					</p>
-					<p>
-						At Mint Digital, we understand that every organization is unique. That's why we take the
-						time to understand your needs and design solutions that are scalable, practical, and
-						results-driven.
-					</p>
-				</div>
+				<p class="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+					About Us
+				</p>
+				<h1 class="heading-display text-5xl lg:text-6xl xl:text-7xl leading-[0.9] mb-6">
+					We're a Boutique Consulting Agency
+				</h1>
 			</div>
-			<div class="bg-gradient-to-br from-primary/20 to-accent rounded-2xl p-8 lg:p-12">
-				<h3 class="text-xl font-semibold text-foreground mb-4">Our Commitment</h3>
-				<p class="text-foreground/80 italic">
-					"Whether you're seeking support for a one-time project or a long-term strategic
-					partnership, we are here to help you move forward with confidence."
+			<div class="flex items-end">
+				<p class="text-lg lg:text-xl text-muted-foreground leading-relaxed">
+					We bring deep technical expertise and a strategic approach to help organizations leverage
+					technology effectively and securely. Our team partners with you to deliver solutions that
+					make a real impact.
 				</p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- Values -->
-<section class="py-16 lg:py-20 bg-muted/50">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="text-center mb-12">
-			<h2 class="text-3xl font-bold text-foreground mb-4">Our Values</h2>
-			<p class="text-muted-foreground max-w-2xl mx-auto">
-				These principles guide everything we do and shape how we work with our clients.
-			</p>
+<!-- Image Section -->
+<section class="pb-20 lg:pb-32">
+	<div class="max-w-7xl mx-auto px-6 lg:px-8">
+		<div class="aspect-[21/9] bg-muted overflow-hidden">
+			<img
+				src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80"
+				alt="Team collaboration"
+				class="w-full h-full object-cover"
+			/>
 		</div>
-		<div class="grid md:grid-cols-3 gap-8">
+	</div>
+</section>
+
+<!-- Story Section -->
+<section class="py-20 lg:py-32 bg-muted">
+	<div class="max-w-7xl mx-auto px-6 lg:px-8">
+		<div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+			<div>
+				<p class="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+					Our Story
+				</p>
+				<h2 class="heading-display text-4xl lg:text-5xl mb-6">Built on Experience</h2>
+			</div>
+			<div class="space-y-6 text-lg text-muted-foreground leading-relaxed">
+				<p>
+					Mint Digital was founded with a simple mission: to help organizations navigate the complex
+					world of technology with confidence. We partner with clients to deliver tailored solutions
+					that align with their goals.
+				</p>
+				<p>
+					Our consultants have hands-on experience across industries and are committed to applying
+					the latest best practices and technologies to solve real business challenges.
+				</p>
+				<p>
+					At Mint Digital, we understand that every organization is unique. That's why we take the
+					time to understand your needs and design solutions that are scalable, practical, and
+					results-driven.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Values Section -->
+<section class="py-20 lg:py-32">
+	<div class="max-w-7xl mx-auto px-6 lg:px-8">
+		<div class="mb-16">
+			<p class="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+				Our Values
+			</p>
+			<h2 class="heading-display text-4xl lg:text-5xl">What Drives Us</h2>
+		</div>
+		<div class="grid md:grid-cols-3 gap-8 lg:gap-12">
 			{#each values as value}
-				<Card.Root class="text-center border-0 bg-white">
-					<Card.Content class="pt-8 pb-8">
-						<div
-							class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6 text-primary"
-						>
-							<value.icon class="w-7 h-7" />
-						</div>
-						<h3 class="text-xl font-semibold text-foreground mb-3">{value.title}</h3>
-						<p class="text-muted-foreground">{value.description}</p>
-					</Card.Content>
-				</Card.Root>
+				<div>
+					<span class="text-5xl lg:text-6xl font-bold text-muted-foreground/30 block mb-4">
+						{value.number}
+					</span>
+					<h3 class="text-2xl font-semibold mb-4">{value.title}</h3>
+					<p class="text-muted-foreground leading-relaxed">{value.description}</p>
+				</div>
 			{/each}
 		</div>
 	</div>
 </section>
 
-<Separator />
-
 <!-- Team Section -->
-<section class="py-16 lg:py-20">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="text-center mb-12">
-			<h2 class="text-3xl font-bold text-foreground mb-4">Our Team</h2>
-			<p class="text-muted-foreground max-w-2xl mx-auto">
-				Meet the experienced professionals who make our success possible.
-			</p>
+<section class="py-20 lg:py-32 bg-foreground text-white">
+	<div class="max-w-7xl mx-auto px-6 lg:px-8">
+		<div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+			<div>
+				<p class="text-sm font-medium text-white/50 uppercase tracking-wider mb-4">Our Team</p>
+				<h2 class="heading-display text-4xl lg:text-5xl">Meet the Experts</h2>
+			</div>
 		</div>
 		<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
 			{#each teamMembers as member}
-				<Card.Root class="overflow-hidden">
-					<div class="aspect-square bg-gradient-to-br from-primary/20 to-accent flex items-center justify-center">
+				<div class="group">
+					<div class="aspect-square w-32 lg:w-40 overflow-hidden mb-6 bg-white/10">
 						{#if member.image}
-							<img src={member.image} alt={member.name} class="w-full h-full object-cover" />
+							<img
+								src={member.image}
+								alt={member.name}
+								class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+							/>
 						{:else}
-							<div class="w-24 h-24 bg-white/50 rounded-full flex items-center justify-center">
-								<span class="text-3xl font-bold text-primary">
+							<div class="w-full h-full flex items-center justify-center">
+								<span class="text-5xl font-bold text-white/20">
 									{member.name
 										.split(' ')
 										.map((n) => n[0])
@@ -165,41 +177,29 @@
 							</div>
 						{/if}
 					</div>
-					<Card.Content class="pt-6">
-						<h3 class="font-semibold text-lg text-foreground">{member.name}</h3>
-						<p class="text-sm text-primary mb-3">{member.title}</p>
-						<p class="text-sm text-muted-foreground">{member.bio}</p>
-						<div class="flex gap-3 mt-4">
-							<button
-								class="text-muted-foreground hover:text-primary transition-colors"
-								aria-label="LinkedIn"
-							>
-								<Linkedin class="w-5 h-5" />
-							</button>
-							<button
-								class="text-muted-foreground hover:text-primary transition-colors"
-								aria-label="Email"
-							>
-								<Mail class="w-5 h-5" />
-							</button>
-						</div>
-					</Card.Content>
-				</Card.Root>
+					<h3 class="text-xl font-semibold mb-1">{member.name}</h3>
+					<p class="text-white/50 text-sm mb-3">{member.title}</p>
+					<p class="text-white/70 text-sm leading-relaxed">{member.bio}</p>
+				</div>
 			{/each}
 		</div>
 	</div>
 </section>
 
 <!-- CTA Section -->
-<section class="py-16 lg:py-20 bg-primary text-white">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-		<h2 class="text-3xl font-bold mb-4">Want to Work With Us?</h2>
-		<p class="text-primary-foreground/90 max-w-2xl mx-auto mb-8">
+<section class="py-20 lg:py-32">
+	<div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+		<h2 class="heading-display text-4xl lg:text-5xl mb-6">Want to Work With Us?</h2>
+		<p class="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
 			We're always looking to partner with organizations that share our commitment to excellence.
 			Let's discuss how we can help you achieve your goals.
 		</p>
-		<Button href="/contact" variant="secondary" size="lg" class="font-semibold">
+		<a
+			href="/contact"
+			class="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-base font-medium hover:bg-primary/90 transition-colors"
+		>
 			Get in Touch
-		</Button>
+			<ArrowUpRight class="w-5 h-5" />
+		</a>
 	</div>
 </section>
