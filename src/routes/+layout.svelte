@@ -1,7 +1,6 @@
 <script lang="ts">
 	import '../app.css';
 	import { page } from '$app/stores';
-	import { Menu, X, ArrowUpRight } from 'lucide-svelte';
 
 	let { children } = $props();
 	let mobileMenuOpen = $state(false);
@@ -31,86 +30,57 @@
 
 <div class="min-h-screen flex flex-col">
 	<!-- Header -->
-	<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-border">
-		<div class="max-w-7xl mx-auto px-6 lg:px-8">
-			<div class="flex justify-between items-center h-16 lg:h-20">
+	<header class="sticky top-0 left-0 right-0 z-20 bg-background border-b-2 border-border h-[70px] flex flex-col justify-center">
+		<div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+			<div class="flex justify-between items-center w-full">
 				<!-- Logo -->
-				<a href="/" class="flex items-center gap-2">
-					<span class="text-xl lg:text-2xl tracking-wide uppercase" style="font-family: 'Anton', sans-serif;">Mint Digital</span>
+				<a href="/" class="nav-logo">
+					Mint Digital
 				</a>
 
 				<!-- Desktop Navigation -->
-				<nav class="hidden md:flex items-center gap-8">
+				<nav class="hidden md:flex items-center gap-6 lg:gap-8">
 					{#each navLinks as link}
 						<a
 							href={link.href}
-							class="text-sm font-medium transition-colors hover:text-muted-foreground {$page.url
-								.pathname === link.href
-								? 'text-foreground'
-								: 'text-muted-foreground'}"
+							class="nav-link {$page.url.pathname === link.href ? 'nav-link-active' : ''}"
 						>
 							{link.label}
 						</a>
 					{/each}
 				</nav>
 
-				<!-- CTA Button -->
-				<div class="hidden md:block">
-					<a
-						href="/contact"
-						class="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors"
-					>
-						Let's Talk
-						<ArrowUpRight class="w-4 h-4" />
-					</a>
-				</div>
-
 				<!-- Mobile menu button -->
 				<button
-					class="md:hidden p-2 text-foreground"
+					class="menu-button flex md:hidden"
 					onclick={() => (mobileMenuOpen = !mobileMenuOpen)}
 					aria-label="Toggle menu"
 				>
-					{#if mobileMenuOpen}
-						<X class="w-6 h-6" />
-					{:else}
-						<Menu class="w-6 h-6" />
-					{/if}
+					<span class="menu-text">{mobileMenuOpen ? 'Close' : 'Menu'}</span>
 				</button>
 			</div>
 		</div>
 
 		<!-- Mobile Navigation -->
 		{#if mobileMenuOpen}
-			<div class="md:hidden bg-white border-t border-border">
-				<nav class="px-6 py-4 space-y-4">
+			<div class="md:hidden absolute top-[70px] left-0 right-0 bg-background border-b-2 border-border">
+				<nav class="container mx-auto px-6 py-6 flex flex-col gap-4">
 					{#each navLinks as link}
 						<a
 							href={link.href}
-							class="block text-lg font-medium transition-colors hover:text-muted-foreground {$page
-								.url.pathname === link.href
-								? 'text-foreground'
-								: 'text-muted-foreground'}"
+							class="nav-link text-xl {$page.url.pathname === link.href ? 'nav-link-active' : ''}"
 							onclick={() => (mobileMenuOpen = false)}
 						>
 							{link.label}
 						</a>
 					{/each}
-					<a
-						href="/contact"
-						class="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium mt-4"
-						onclick={() => (mobileMenuOpen = false)}
-					>
-						Let's Talk
-						<ArrowUpRight class="w-4 h-4" />
-					</a>
 				</nav>
 			</div>
 		{/if}
 	</header>
 
 	<!-- Main Content -->
-	<main class="flex-1 pt-16 lg:pt-20">
+	<main class="flex-1">
 		{@render children()}
 	</main>
 
