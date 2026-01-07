@@ -6,19 +6,16 @@
 		{
 			iconSrc: '/images/browser.svg',
 			title: 'Custom Dashboards',
-			highlightWord: 'Dashboards',
 			description: 'Show actionable insights to the right people at the right time.'
 		},
 		{
 			iconSrc: '/images/mobile.svg',
 			title: 'Data Analysis',
-			highlightWord: 'Analysis',
 			description: 'Make sense of your data and turn it into actionable insights.'
 		},
 		{
 			iconSrc: '/images/light-bulb.svg',
 			title: 'Data Strategy',
-			highlightWord: 'Strategy',
 			description: 'Leverage your data to improve efficiency and make better decisions.'
 		}
 	];
@@ -69,7 +66,7 @@
 				<div class="sm:text-center lg:text-left">
 					<h1 class="heading-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9]">
 						<span class="block">Amplify Your Impact</span>
-						<span class="block text-muted-foreground">With Data-Driven Solutions</span>
+						<span class="block text-green-900">With Data-Driven Solutions</span>
 					</h1>
 					<p class="mt-6 text-base text-muted-foreground sm:mt-8 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-8 md:text-xl lg:mx-0">
 						We work alongside non-profits, universities, and public sector organizations to design and build data-driven tools and strategies that fit your mission and deliver real results.
@@ -124,7 +121,6 @@
 					<ServiceCard
 						iconSrc={service.iconSrc}
 						title={service.title}
-						highlightWord={service.highlightWord}
 						description={service.description}
 						class="h-full transition-transform group-hover:scale-[1.02]"
 					/>

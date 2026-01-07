@@ -34,7 +34,8 @@
 		<div class="max-w-7xl mx-auto px-6 lg:px-8 w-full">
 			<div class="flex justify-between items-center w-full">
 				<!-- Logo -->
-				<a href="/" class="nav-logo">
+				<a href="/" class="nav-logo flex items-center gap-2">
+					<img src="/images/logo.png" alt="" class="h-8 w-8" />
 					Mint Digital
 				</a>
 
