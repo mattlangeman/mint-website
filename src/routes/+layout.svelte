@@ -117,11 +117,11 @@
 					<h3 class="font-semibold mb-4 text-white/50 uppercase text-sm tracking-wider">Contact</h3>
 					<ul class="space-y-3 text-white/70">
 						<li>
-							<a href="mailto:info@mintdigital.co" class="hover:text-white transition-colors">
-								info@mintdigital.co
+							<a href="mailto:hello@mintdigital.co" class="hover:text-white transition-colors">
+								hello@mintdigital.co
 							</a>
 						</li>
-						<li>Washington, DC Metro</li>
+						<li>Baltimore, MD and Washington, DC Metro Area</li>
 					</ul>
 					<div class="flex gap-4 mt-6">
 						{#each socialLinks as social}
