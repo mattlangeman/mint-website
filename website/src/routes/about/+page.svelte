@@ -4,21 +4,21 @@
 	const teamMembers = [
 		{
 			name: 'Zach',
-			title: 'Founder & CEO',
+			title: 'Founder & Principal Consultant',
 			bio: 'With over 15 years in IT consulting, Zach leads our team in delivering innovative solutions for government and enterprise clients.',
 			image: '/images/team/zach-outside.jpeg'
 		},
 		{
 			name: 'Matt',
-			title: 'CTO',
+			title: 'Principal Consultant',
 			bio: 'Matt brings over 15 years of experience building custom web applications and dashboards. He leads our technical direction and ensures we deliver solutions that truly meet client needs.',
 			image: '/images/team/matt.jpg'
 		},
 		{
 			name: 'Trevor',
-			title: 'CDO',
+			title: 'Principal Consultant',
 			bio: 'Trevor combines deep expertise in data engineering and GIS with years of experience turning complex datasets into actionable insights. He leads our data strategy initiatives.',
-			image: '/images/team/trevor-outside.jpeg'
+			image: '/images/team/trevor-outside.png'
 		}
 	];
 
