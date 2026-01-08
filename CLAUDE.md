@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is the Mint Digital Marketing website - a boutique consulting agency specializing in IT consulting, cloud services, cybersecurity, project management, and custom web development.
+This is the Mint Digital website - a boutique consulting agency that helps non-profits, universities, and public sector organizations design data-driven tools and strategies that deliver real results. Amplify your impact with data-driven solutions.
 
 **Design Reference:** https://ovo-altverse.webflow.io/
 - Replicate the Altverse design closely, adapting content for Mint Digital
