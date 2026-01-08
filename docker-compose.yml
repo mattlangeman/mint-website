@@ -1,0 +1,13 @@
+services:
+  agent:
+    build: .
+    volumes:
+      - ./:/workspace
+      - claude-config:/home/claude/.claude
+    environment:
+      - CLAUDE_CONFIG_DIR=/home/claude/.claude      
+    stdin_open: true
+    tty: true
+
+volumes:
+  claude-config:

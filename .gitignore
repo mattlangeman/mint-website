@@ -1,23 +1,25 @@
-node_modules
+# Dependencies
+node_modules/
 
-# Output
-.output
-.vercel
-.netlify
-.wrangler
-/.svelte-kit
-/build
+# Build output
+.svelte-kit/
+build/
+dist/
+
+# Environment
+.env
+.env.*
+!.env.example
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Env
-.env
-.env.*
-!.env.example
-!.env.test
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
 
-# Vite
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
+# Claude Code
+.claude/

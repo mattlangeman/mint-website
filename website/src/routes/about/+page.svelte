@@ -3,27 +3,21 @@
 
 	const teamMembers = [
 		{
-			name: 'Zach Giesky',
+			name: 'Zach',
 			title: 'Founder & CEO',
 			bio: 'With over 15 years in IT consulting, Zach leads our team in delivering innovative solutions for government and enterprise clients.',
 			image: '/images/team/zach.jpg'
 		},
 		{
-			name: 'Matt Langeman',
+			name: 'Matt',
 			title: 'CTO',
 			bio: 'Matt brings over 15 years of experience building custom web applications and dashboards. He leads our technical direction and ensures we deliver solutions that truly meet client needs.',
 			image: '/images/team/matt.jpg'
 		},
 		{
-			name: 'Trevor Olexy',
+			name: 'Trevor',
 			title: 'CDO',
 			bio: 'Trevor combines deep expertise in data engineering and GIS with years of experience turning complex datasets into actionable insights. He leads our data strategy initiatives.',
-			image: null
-		},
-		{
-			name: 'Chris Gillespie',
-			title: 'COO',
-			bio: 'Chris brings 15 years of experience in climate and energy policy, helping government and organizations navigate infrastructure resilience and sustainability challenges.',
 			image: null
 		}
 	];
