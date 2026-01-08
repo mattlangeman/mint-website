@@ -41,10 +41,6 @@
 	];
 
 	const stats = [
-		{ value: '50+', label: 'Projects Delivered' },
-		{ value: '15+', label: 'Years Experience' },
-		{ value: '99%', label: 'Client Satisfaction' },
-		{ value: '24/7', label: 'Support Available' }
 	];
 </script>
 
@@ -116,25 +112,6 @@
 	</div>
 </section>
 
-<!-- Stats Section -->
-<section class="py-20 lg:py-32 bg-muted">
-	<div class="max-w-7xl mx-auto px-6 lg:px-8">
-		<div class="text-center mb-16">
-			<p class="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
-				By The Numbers
-			</p>
-			<h2 class="heading-display text-4xl lg:text-5xl">Our Track Record</h2>
-		</div>
-		<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-			{#each stats as stat}
-				<div class="text-center">
-					<div class="text-5xl lg:text-6xl font-bold mb-2">{stat.value}</div>
-					<p class="text-muted-foreground">{stat.label}</p>
-				</div>
-			{/each}
-		</div>
-	</div>
-</section>
 
 <!-- CTA Section -->
 <section class="py-20 lg:py-32">

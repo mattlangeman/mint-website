@@ -2,7 +2,7 @@
 	import type { Component } from 'svelte';
 
 	interface Props {
-		icon?: Component<{ class?: string; strokeWidth?: number }>;
+		icon?: Component<Record<string, unknown>>;
 		iconSrc?: string;
 		title: string;
 		description: string;

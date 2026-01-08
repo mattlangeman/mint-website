@@ -31,9 +31,9 @@
 	const values = [
 		{
 			number: '01',
-			title: 'Mission-Focused',
+			title: 'Mission Focus',
 			description:
-				'We understand the critical nature of government and enterprise IT. Every solution we deliver is designed with your mission in mind.'
+				'We understand the critical nature of non-profit and public sector work. Every solution we deliver is designed with your mission in mind.'
 		},
 		{
 			number: '02',

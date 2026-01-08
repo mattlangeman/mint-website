@@ -1,30 +1,6 @@
 <script lang="ts">
 	import { ArrowUpRight } from 'lucide-svelte';
-	import { ServiceCard } from '$lib/components/ui/service-card';
-
-	const services = [
-		{
-			iconSrc: '/images/browser.svg',
-			title: 'Custom Dashboards',
-			highlightWord: 'Dashboards',
-			description:
-				'Show actionable insights to the right people at the right time. We build tailored dashboard solutions that give your team the visibility they need to make informed decisions quickly.'
-		},
-		{
-			iconSrc: '/images/mobile.svg',
-			title: 'Data Analysis',
-			highlightWord: 'Analysis',
-			description:
-				'Make sense of your data and turn it into actionable insights. We help you understand patterns, trends, and opportunities hidden in your data through clear, compelling visualizations.'
-		},
-		{
-			iconSrc: '/images/light-bulb.svg',
-			title: 'Data Strategy',
-			highlightWord: 'Strategy',
-			description:
-				'Learn how to leverage your data to improve efficiency and make better decisions. We work with you to develop a roadmap for becoming a more data-driven organization.'
-		}
-	];
+	import { ServicesGrid } from '$lib/components/ui/services-grid';
 </script>
 
 <svelte:head>
@@ -56,16 +32,7 @@
 <!-- Services Grid -->
 <section class="pb-20 lg:pb-32 border-t border-border pt-20 lg:pt-32">
 	<div class="max-w-7xl mx-auto px-6 lg:px-8">
-		<div class="grid lg:grid-cols-3 gap-6">
-			{#each services as service}
-				<ServiceCard
-					iconSrc={service.iconSrc}
-					title={service.title}
-					highlightWord={service.highlightWord}
-					description={service.description}
-				/>
-			{/each}
-		</div>
+		<ServicesGrid />
 	</div>
 </section>
 

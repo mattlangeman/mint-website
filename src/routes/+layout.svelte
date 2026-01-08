@@ -13,8 +13,6 @@
 	];
 
 	const socialLinks = [
-		{ label: 'LinkedIn', href: '#' },
-		{ label: 'Twitter', href: '#' }
 	];
 </script>
 
@@ -93,8 +91,9 @@
 				<div class="lg:col-span-2">
 					<a href="/" class="text-2xl lg:text-3xl tracking-wide uppercase" style="font-family: 'Anton', sans-serif;">Mint Digital</a>
 					<p class="mt-4 text-white/70 max-w-md leading-relaxed">
-						Transforming ideas into digital experiences. We partner with government agencies and
-						enterprises to deliver technology solutions that make an impact.
+						Amplify your impact with data-driven solutions. We work alongside non-profits, universities, and public sector organizations to design and build data-driven tools and strategies that fit your mission and deliver real results.
+
+
 					</p>
 				</div>
 

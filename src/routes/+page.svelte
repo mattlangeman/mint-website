@@ -1,24 +1,6 @@
 <script lang="ts">
-	import { ServiceCard } from '$lib/components/ui/service-card';
+	import { ServicesGrid } from '$lib/components/ui/services-grid';
 	import { ArrowUpRight, ArrowRight } from 'lucide-svelte';
-
-	const services = [
-		{
-			iconSrc: '/images/browser.svg',
-			title: 'Custom Dashboards',
-			description: 'Show actionable insights to the right people at the right time.'
-		},
-		{
-			iconSrc: '/images/mobile.svg',
-			title: 'Data Analysis',
-			description: 'Make sense of your data and turn it into actionable insights.'
-		},
-		{
-			iconSrc: '/images/light-bulb.svg',
-			title: 'Data Strategy',
-			description: 'Leverage your data to improve efficiency and make better decisions.'
-		}
-	];
 
 	const projects = [
 		{
@@ -43,7 +25,7 @@
 	<title>Mint Digital - Amplify Your Impact With Data-Driven Solutions</title>
 	<meta
 		name="description"
-		content="Mint Digital is a boutique consulting agency specializing in IT consulting, cloud services, cybersecurity, and custom development for government and enterprise clients."
+		content="Mint Digital is a boutique consulting agency specializing in data-driven solutions for non-profits, universities, and public sector organizations. Amplify your impact with our custom dashboards, data analysis, and strategy services."
 	/>
 </svelte:head>
 
@@ -69,7 +51,7 @@
 						<span class="block text-green-900">With Data-Driven Solutions</span>
 					</h1>
 					<p class="mt-6 text-base text-muted-foreground sm:mt-8 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-8 md:text-xl lg:mx-0">
-						We work alongside non-profits, universities, and public sector organizations to design and build data-driven tools and strategies that fit your mission and deliver real results.
+						We help non-profits, universities, and public sector organizations design data-driven tools and strategies that deliver real results.
 					</p>
 					<div class="mt-8 sm:mt-10 sm:flex sm:justify-center lg:justify-start gap-4">
 						<a
@@ -115,17 +97,16 @@
 			</p>
 		</div>
 
-		<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-			{#each services as service}
-				<a href="/services" class="group block">
-					<ServiceCard
-						iconSrc={service.iconSrc}
-						title={service.title}
-						description={service.description}
-						class="h-full transition-transform group-hover:scale-[1.02]"
-					/>
-				</a>
-			{/each}
+		<ServicesGrid featuredOnly />
+
+		<div class="text-center mt-12">
+			<a
+				href="/services"
+				class="inline-flex items-center justify-center gap-2 border border-border px-8 py-4 rounded-full text-base font-medium hover:bg-muted transition-colors"
+			>
+				More Services
+				<ArrowRight class="w-4 h-4" />
+			</a>
 		</div>
 	</div>
 </section>
