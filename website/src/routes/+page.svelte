@@ -1,24 +1,6 @@
 <script lang="ts">
 	import { ServicesGrid } from '$lib/components/ui/services-grid';
 	import { ArrowUpRight, ArrowRight } from 'lucide-svelte';
-
-	const projects = [
-		{
-			title: 'Federal Cloud Migration',
-			category: 'Cloud Services',
-			image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80'
-		},
-		{
-			title: 'Security Assessment Program',
-			category: 'Cybersecurity',
-			image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80'
-		},
-		{
-			title: 'Custom Case Management',
-			category: 'Development',
-			image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80'
-		}
-	];
 </script>
 
 <svelte:head>
@@ -60,12 +42,6 @@
 						>
 							Start a Project
 							<ArrowUpRight class="w-5 h-5" />
-						</a>
-						<a
-							href="/projects"
-							class="mt-3 sm:mt-0 w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-border px-8 py-4 rounded-full text-base font-medium hover:bg-muted transition-colors"
-						>
-							View Our Work
 						</a>
 					</div>
 				</div>
@@ -114,54 +90,6 @@
 <!-- Line Separator -->
 <div class="h-px bg-border"></div>
 
-<!-- Featured Work Section -->
-<section class="py-20 lg:py-32">
-	<div class="max-w-7xl mx-auto px-6 lg:px-8">
-		<div class="grid lg:grid-cols-2 gap-12 lg:gap-20 mb-16">
-			<div>
-				<h2 class="heading-display text-4xl lg:text-5xl">Our Featured Projects</h2>
-			</div>
-			<div>
-				<p class="text-muted-foreground text-lg mb-6">
-					Here's a glimpse of the work we're proud to showcase. From custom dashboards to data
-					strategy, our projects speak to our commitment to excellence.
-				</p>
-				<a href="/about" class="inline-flex items-center gap-2 text-sm font-medium hover:gap-3 transition-all">
-					About Us
-					<ArrowRight class="w-4 h-4" />
-				</a>
-			</div>
-		</div>
-
-		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-			{#each projects as project}
-				<a href="/projects" class="group block">
-					<div class="relative aspect-[4/3] overflow-hidden mb-4 bg-muted">
-						<img
-							src={project.image}
-							alt={project.title}
-							class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-						/>
-					</div>
-					<div class="flex items-center justify-between">
-						<div>
-							<h3 class="text-lg font-semibold">{project.title}</h3>
-						</div>
-						<img
-							src="/images/black-arrow.svg"
-							alt=""
-							class="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity"
-						/>
-					</div>
-				</a>
-			{/each}
-		</div>
-	</div>
-</section>
-
-<!-- Line Separator -->
-<div class="h-px bg-border"></div>
-
 <!-- About Preview Section -->
 <section class="py-20 lg:py-32 bg-foreground text-white">
 	<div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -189,7 +117,11 @@
 				</a>
 			</div>
 			<div class="relative">
-				<div class="aspect-square bg-white/10"></div>
+				<img
+					src="https://images.unsplash.com/photo-1521898284481-a5ec348cb555?w=800&q=80"
+					alt="Remote work collaboration"
+					class="aspect-square object-cover rounded-sm"
+				/>
 			</div>
 		</div>
 	</div>

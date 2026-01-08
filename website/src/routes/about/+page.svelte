@@ -6,7 +6,7 @@
 			name: 'Zach',
 			title: 'Founder & CEO',
 			bio: 'With over 15 years in IT consulting, Zach leads our team in delivering innovative solutions for government and enterprise clients.',
-			image: '/images/team/zach.jpg'
+			image: '/images/team/zach-outside.jpeg'
 		},
 		{
 			name: 'Matt',
@@ -18,7 +18,7 @@
 			name: 'Trevor',
 			title: 'CDO',
 			bio: 'Trevor combines deep expertise in data engineering and GIS with years of experience turning complex datasets into actionable insights. He leads our data strategy initiatives.',
-			image: null
+			image: '/images/team/trevor-outside.jpeg'
 		}
 	];
 
