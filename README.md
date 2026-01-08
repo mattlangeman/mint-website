@@ -56,7 +56,7 @@ docker compose exec agent claude --dangerously-skip-permissions
 
 This gives Claude Code a contained environment to work in without risk to your local system.
 
-**You may need to copy a login url into a browser and then copy an auto code back into the docker terminal**
+**You may need to copy a login url into a browser and then copy an auth code back into the docker terminal**
 
 ## Project Structure
 
