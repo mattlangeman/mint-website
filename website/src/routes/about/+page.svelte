@@ -5,13 +5,13 @@
 		{
 			name: 'Zach',
 			title: 'Founder & Principal Consultant',
-			bio: 'With over 15 years in IT consulting, Zach leads our team in delivering innovative solutions for government and enterprise clients.',
+			bio: 'With over 15 years in IT consulting, cybersecurity, and web development, Zach leads our team in delivering innovative solutions for government and enterprise clients.',
 			image: '/images/team/zach-outside.jpeg'
 		},
 		{
 			name: 'Matt',
 			title: 'Principal Consultant',
-			bio: 'Matt brings over 15 years of experience building custom web applications and dashboards. He leads our technical direction and ensures we deliver solutions that truly meet client needs.',
+			bio: 'Matt brings over 20 years of full-stack development experience to lead our technical direction, building custom web applications and dashboards that meet real client needs.',
 			image: '/images/team/matt.jpg'
 		},
 		{

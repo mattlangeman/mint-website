@@ -26,12 +26,12 @@
 		</div>
 	{/if}
 
-	<div class="flex-1"></div>
-
 	<div class="pt-8">
 		<h3 class="text-2xl lg:text-3xl mb-3 leading-tight" style="font-family: 'Anton', sans-serif;">
 			{title}
 		</h3>
 		<p class="text-foreground/80 leading-relaxed">{description}</p>
 	</div>
+
+	<div class="flex-1"></div>
 </div>
